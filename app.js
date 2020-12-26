@@ -1,5 +1,6 @@
 let gridContainer = document.querySelector(".container");
-
+let clearGridButton = document.querySelector("#cleargrid");
+let newGridButton = document.querySelector("#newgrid");
 
 let initialGrid = () => {
 
@@ -24,7 +25,6 @@ gridContainer.addEventListener("mouseover", (evt) => {
 clearGrid = () => {
     let gridContents = gridContainer.querySelectorAll("div");
     let gridArray = Array.from(gridContents);
-    console.log(gridArray);
     
     gridArray.forEach(element => {
         element.style.backgroundColor = "white"
@@ -32,9 +32,13 @@ clearGrid = () => {
     
 };
 
-createGrid  = (x) => {
+
+createGrid  = () => {
+
+    let x = parseInt(prompt("New grid size? Value must be a positive integer between 16 and 100"));;
     
-    gridContainer.innerHTML = "";
+    if(x>= 16 && x <= 100){
+        gridContainer.innerHTML = "";
    
     let gridSize = x * x;
 
@@ -48,5 +52,15 @@ createGrid  = (x) => {
     gridContainer.style.gridTemplateColumns = `repeat(${x}, 1fr)`;
     gridContainer.style.gridTemplateRows = `repeat(${x}, 1fr)`;
 
+    } else{
+        alert("Invalid number. Try again");
+    }
+    
+    
+
 };
+
+clearGridButton.addEventListener("click", clearGrid);
+newGridButton.addEventListener("click", createGrid);
+
 
