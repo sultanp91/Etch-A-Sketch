@@ -26,3 +26,7 @@ html {
 .filledBoxes {
     background-color: black;
 }
+
+.clearBoxes {
+    background-color: white;
+}
