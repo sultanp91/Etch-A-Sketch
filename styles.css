@@ -1,0 +1,28 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+.container {
+    height: 64rem;
+    width: 64rem;
+    border: 0.5rem double black;
+    display: grid;
+    grid-template-columns: repeat(16, 1fr);
+    grid-template-rows: repeat(16, 1fr);
+    padding: 0.5rem;
+
+}
+
+.gridboxes{
+    border: 1px solid black;
+}
+
+.filledBoxes {
+    background-color: black;
+}
