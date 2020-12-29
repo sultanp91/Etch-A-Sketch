@@ -1,4 +1,4 @@
-let gridContainer = document.querySelector(".container");
+let gridContainer = document.querySelector(".grid-container");
 let clearGridButton = document.querySelector("#cleargrid");
 let newGridButton = document.querySelector("#newgrid");
 
